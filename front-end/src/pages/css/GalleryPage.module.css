@@ -1,0 +1,31 @@
+.container {
+  padding: 20px var(--padding);
+  background-color: white;
+}
+
+.title {
+  font-family: "Fjalla One";
+  color: #daa520;
+  font-size: calc(var(--font-logo) * 1.5);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px var(--padding);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.card img:hover {
+  transform: scale(1.1);
+}

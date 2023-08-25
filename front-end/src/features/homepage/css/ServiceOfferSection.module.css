@@ -1,0 +1,74 @@
+.serviceSection {
+  padding: 0 var(--padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.title,
+.subTitle {
+  margin: 20px;
+  font-size: var(--font-title);
+  text-align: center;
+}
+
+.title {
+  font-family: "Fjalla One";
+}
+
+.subTitle {
+  font-family: "Biryani";
+  font-weight: 600;
+}
+
+.imageContainer img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.serviceGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  font-size: calc(var(--font-regular) * 1.2);
+  text-align: center;
+}
+
+/* The following class is added to target the Nail Service description */
+.serviceGalleryDescription {
+  width: 700px;
+}
+
+.galleryDisplay {
+  margin: 20px 0;
+  display: flex;
+  gap: 160px;
+}
+
+.galleryLeft,
+.galleryRight {
+  width: 100%;
+}
+
+.viewMoreBtn {
+  margin: 20px 0;
+  text-align: end;
+}
+
+.viewMoreBtn a {
+  display: inline-block;
+  padding: 0 25px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--font-button);
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.viewMoreBtn a:hover {
+  transform: scale(1.1);
+}

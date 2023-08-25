@@ -1,0 +1,81 @@
+.emailForm {
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-title);
+  font-family: "Fjalla One";
+  margin-bottom: 50px;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.inputText {
+  flex: 1;
+}
+
+.inputDateTime {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+.inputDate,
+.inputTime {
+  padding: 5px 20px;
+  border: 2px solid black;
+  font-size: 16px;
+}
+
+.inputText input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 5px 30px;
+  outline: none;
+  font-size: var(--font-sub-title);
+}
+
+.inputText label {
+  color: black;
+  font-size: var(--font-sub-title);
+  display: block;
+  padding: 5px 30px;
+  margin-bottom: 5px;
+}
+
+.inputText input:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+/* Button styling */
+.submitBtn {
+  text-align: end;
+}
+.submitBtn button {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: var(--font-button);
+  font-weight: bold;
+
+  border-radius: 50px;
+  border: 2px dashed black;
+  padding: 10px 30px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

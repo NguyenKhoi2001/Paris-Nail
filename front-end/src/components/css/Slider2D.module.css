@@ -1,0 +1,22 @@
+.sliderContainer {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.1),
+    0 12px 24px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.14),
+      0 14px 28px rgba(0, 0, 0, 0.18);
+    transform: scale(1.05);
+    filter: brightness(105%);
+  }
+}

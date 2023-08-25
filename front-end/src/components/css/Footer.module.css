@@ -1,0 +1,34 @@
+.footer {
+  position: relative;
+  padding: 20px var(--padding);
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  font-size: var(--font-regular);
+  font-family: "Source Sans 3";
+}
+
+.leftContent {
+  padding-left: 20px;
+}
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  gap: 5px;
+  text-align: center;
+}
+
+.icon {
+  margin-left: 15px;
+  font-size: var(--font-regular);
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #aaa;
+  }
+}

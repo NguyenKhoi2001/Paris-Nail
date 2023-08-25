@@ -1,0 +1,156 @@
+/* Biryani Font-Faces */
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani Black"),
+    url("../../assets/font/Biryani/Biryani-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani Bold"),
+    url("../../assets/font/Biryani/Biryani-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani ExtraBold"),
+    url("../../assets/font/Biryani/Biryani-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani ExtraLight"),
+    url("../../assets/font/Biryani/Biryani-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani Light"),
+    url("../../assets/font/Biryani/Biryani-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani Regular"),
+    url("../../assets/font/Biryani/Biryani-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani SemiBold"),
+    url("../../assets/font/Biryani/Biryani-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Fjalla One Font-Face */
+@font-face {
+  font-family: "Fjalla One";
+  src: local("FjallaOne Regular"),
+    url("../../assets/font/Fjalla_One/FjallaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Noto Serif Display Font-Faces */
+@font-face {
+  font-family: "Noto Serif Display";
+  src: local("NotoSerifDisplay Italic"),
+    url("../../assets/font/Noto_Serif_Display/NotoSerifDisplay-Italic-VariableFont_wdth\,wght.ttf")
+      format("truetype");
+  font-weight: normal; /* Variable fonts can support multiple weights, but I've used 'normal' as a placeholder */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto Serif Display";
+  src: local("NotoSerifDisplay Regular"),
+    url("../../assets/font/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth,wght.ttf")
+      format("truetype");
+  font-weight: normal; /* Variable fonts can support multiple weights */
+  font-style: normal;
+}
+
+/* Source Sans 3 Font-Faces */
+@font-face {
+  font-family: "Source Sans 3";
+  src: local("SourceSans3 Italic"),
+    url("../../assets/font/Source_Sans_3/SourceSans3-Italic-VariableFont_wght.ttf")
+      format("truetype");
+  font-weight: normal; /* Variable fonts can support multiple weights */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: local("SourceSans3 Regular"),
+    url("../../assets/font/Source_Sans_3/SourceSans3-VariableFont_wght.ttf")
+      format("truetype");
+  font-weight: normal; /* Variable fonts can support multiple weights */
+  font-style: normal;
+}
+
+/* Tenor Sans Font-Face */
+@font-face {
+  font-family: "Tenor Sans";
+  src: local("TenorSans Regular"),
+    url("../../assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Voga Font-Face */
+@font-face {
+  font-family: "Voga";
+  src: local("Voga Medium"),
+    url("../../assets/font/Voga-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*global style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*website*/
+  --padding: calc(0.0625 * 100vw);
+
+  /* Colors */
+  --logo-color: #000080;
+  --logo-color-2: #7474b4;
+  --background-color-white: #fff;
+  --background-color-black: #010101;
+  --text-color: #000;
+  --text-color-2: #fff;
+
+  /* Font Sizes scale with 1366x768*/
+  --font-regular: calc(0.012 * 100vw); /*16px*/
+  --font-navigation: calc(0.0175 * 100vw); /*24px*/
+  --font-button: calc(0.016 * 100vw); /*20px*/
+  --font-sub-title: calc(0.0205 * 100vw); /*28px*/ /*1600 x 32*/
+  --font-title: calc(0.025 * 100vw); /*34px*/
+  --font-logo: calc(0.0278 * 100vw); /*38px*/
+
+  /*about*/
+  --about-width: calc(0.4115 * 100vw); /*562px*/
+  --about-height: calc(0.42 * 100vh); /*323px*/
+}
+.container {
+  position: relative;
+}

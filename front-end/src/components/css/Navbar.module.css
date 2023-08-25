@@ -1,0 +1,78 @@
+@import url("./global.css");
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+}
+.different {
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  background-color: rgba(255, 255, 255, 1);
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+.different a {
+  color: var(--text-color);
+  /* color: var(--text-color-2); */
+}
+.nav .logo,
+.nav .right {
+  flex: 1;
+}
+
+.nav .links {
+  flex: 2;
+  height: 100%;
+}
+
+.nav .links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav .links ul li {
+  font-size: var(--font-navigation);
+  font-family: "Fjalla One";
+}
+
+.nav .logo {
+  font-size: var(--font-logo);
+  font-family: "Voga";
+}
+
+.nav .logo .text {
+  color: var(--logo-color);
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+.different .logo .text {
+  color: var(--logo-color);
+  /* color: var(--logo-color-2); */
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+.logoContainer {
+  position: relative;
+  margin-right: calc(var(--font-logo) * 0.6);
+  /* margin-right: calc(var(--font-logo) * 0.35); */
+}
+.logo img {
+  width: calc(var(--font-logo) * 0.6);
+  left: calc(var(--font-logo) * -0.1);
+  position: absolute;
+  bottom: 5px;
+  /* left: calc(var(--font-logo) * -0.15);
+  width: calc(var(--font-logo) * 0.42); */
+}
+.different .logo img {
+  /* color: var(--text-color); */
+  color: var(--text-color-2);
+}

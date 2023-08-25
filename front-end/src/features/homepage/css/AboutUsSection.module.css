@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding);
+}
+
+.title {
+  margin: 100px 0 50px 0;
+  font-family: "Fjalla One";
+  font-size: var(--font-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowLeft,
+.rowRight {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 70px;
+}
+
+.image,
+.textContent {
+  width: var(--about-width);
+  height: var(--about-height);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Source Sans 3";
+  text-align: center;
+}
+
+.textContent .subTitle {
+  margin-bottom: 50px;
+  font-size: var(--font-sub-title);
+  font-weight: 200;
+}
+
+.textContent .text {
+  font-size: var(--font-regular);
+}
+
+.viewMoreBtn {
+  margin: 20px 0;
+  text-align: end;
+}
+
+.viewMoreBtn a {
+  display: inline-block;
+  padding: 0 25px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--font-button);
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.viewMoreBtn a:hover {
+  transform: scale(1.1);
+}
