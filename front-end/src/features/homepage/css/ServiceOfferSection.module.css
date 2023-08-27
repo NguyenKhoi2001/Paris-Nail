@@ -6,7 +6,6 @@
 
 .title,
 .subTitle {
-  margin: 20px;
   font-size: var(--font-title);
   text-align: center;
 }

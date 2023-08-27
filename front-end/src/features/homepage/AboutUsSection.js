@@ -81,9 +81,9 @@ const AboutUsSection = () => {
         </div>
       </div>
 
-      <div className={styles.viewMoreBtn}>
+      {/* <div className={styles.viewMoreBtn}>
         <Link>View More</Link>
-      </div>
+      </div> */}
     </div>
   );
 };

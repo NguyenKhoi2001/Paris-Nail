@@ -1,0 +1,5 @@
+Design:
+ - Sửa Hub Inspiration thành section
+	+ Nail Slider
+	+ Eyelash Slider
+	+ Pedicure

@@ -36,8 +36,8 @@ const JobSlider = () => {
     <div className={styles.jobContainer}>
       <Slider2D images={images} />
       <div className={styles.title}>
-        <div>Need A job contact us</div>
-        <div>We always Hiring</div>
+        {/* <div>Need A job contact us</div>
+        <div>We always Hiring</div> */}
       </div>
     </div>
   );

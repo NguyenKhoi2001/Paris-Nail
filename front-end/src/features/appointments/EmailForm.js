@@ -7,17 +7,40 @@ const EmailForm = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+
+  const currentDate = new Date().toISOString().split("T")[0];
+  const currentTime = new Date().toTimeString().split(" ")[0].slice(0, 5);
+
+  const [date, setDate] = useState(currentDate);
+  const [time, setTime] = useState(currentTime);
+
   const navigate = useNavigate();
+  const formatDateTime = (date, time) => {
+    const formattedDate = new Date(date + " " + time);
+
+    const options = {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    };
+
+    return formattedDate.toLocaleDateString("en-US", options);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (name && phone && email && message && date && time) {
+      const formattedDateTime = formatDateTime(date, time);
+
       let templateParams = {
         from_name: name,
         from_email: email,
-        message: `You have an appointment scheduled on ${date} at ${time}. Message: ${message}`,
+        date_time: formattedDateTime,
+        message: message,
         phone: phone,
       };
 
@@ -38,10 +61,28 @@ const EmailForm = () => {
           }
         );
     } else {
-      console.log(name, phone, email, message, date, time);
-      alert(
-        "Please fill out all fields before submitting. including the date and time"
-      );
+      let unfilledFields = [];
+      if (!name) unfilledFields.push("name");
+      if (!phone) unfilledFields.push("phone");
+      if (!email) unfilledFields.push("email");
+      if (!message) unfilledFields.push("message");
+      if (!date) unfilledFields.push("date");
+      if (!time) unfilledFields.push("time");
+
+      if (unfilledFields.length > 0) {
+        alert(
+          `Please fill out the following fields before submitting: ${unfilledFields.join(
+            ", "
+          )}`
+        );
+
+        // Applying error class to unfilled fields
+        unfilledFields.forEach((field) => {
+          document.getElementById(field).classList.add(styles.error);
+        });
+      } else {
+        alert("Some error happen, please try again");
+      }
     }
   };
   return (
@@ -62,11 +103,13 @@ const EmailForm = () => {
             <input
               className={styles.inputDate}
               type="date"
+              defaultValue={currentDate}
               onChange={(e) => setDate(e.target.value)}
             />
             <input
               className={styles.inputTime}
               type="time"
+              defaultValue={currentTime}
               onChange={(e) => setTime(e.target.value)}
             />
           </div>

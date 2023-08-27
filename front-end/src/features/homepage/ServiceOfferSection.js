@@ -43,7 +43,7 @@ const ServiceOfferSection = () => {
         </div>
       </div>
       <div className={styles.viewMoreBtn}>
-        <Link>View More</Link>
+        <Link to="/services">View More</Link>
       </div>
     </div>
   );

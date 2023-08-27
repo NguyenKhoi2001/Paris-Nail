@@ -31,7 +31,7 @@ const NewInspirationHub = () => {
         </div>
       </div>
       <div className={styles.viewMoreBtn}>
-        <Link>View More</Link>
+        <Link to="/gallery">View More</Link>
       </div>
     </div>
   );
