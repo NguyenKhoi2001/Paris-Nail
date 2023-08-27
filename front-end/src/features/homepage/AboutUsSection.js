@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./css/AboutUsSection.module.css";
 
 import BrandAndColorImage from "../../assets/images/website/brand-color.jpg";
