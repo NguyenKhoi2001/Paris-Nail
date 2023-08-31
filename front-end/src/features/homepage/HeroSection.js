@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className={styles.title}>
           LET'S MAKE YOUR NAIL AS UNIQUE AS YOU
         </div>
-        <Link to="/booking" className={styles.linkBtn}>
+        <Link to="/appointments" className={styles.linkBtn}>
           <span>Book Now</span>
         </Link>
       </div>
