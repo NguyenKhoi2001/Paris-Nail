@@ -6,7 +6,8 @@ const EmailForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [technicalNote, setTechnicalNote] = useState("");
+  const [serviceNote, setServiceNote] = useState("");
 
   const currentDate = new Date().toISOString().split("T")[0];
   const currentTime = new Date().toTimeString().split(" ")[0].slice(0, 5);
@@ -33,14 +34,24 @@ const EmailForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name && phone && email && message && date && time) {
+    if (
+      name &&
+      phone &&
+      email &&
+      technicalNote &&
+      serviceNote &&
+      date &&
+      time
+    ) {
       const formattedDateTime = formatDateTime(date, time);
 
       let templateParams = {
         from_name: name,
         from_email: email,
         date_time: formattedDateTime,
-        message: message,
+        technical_note: technicalNote,
+        service_note: serviceNote,
+
         phone: phone,
       };
 
@@ -65,7 +76,9 @@ const EmailForm = () => {
       if (!name) unfilledFields.push("name");
       if (!phone) unfilledFields.push("phone");
       if (!email) unfilledFields.push("email");
-      if (!message) unfilledFields.push("message");
+      if (!technicalNote) unfilledFields.push("technicalNote");
+      if (!serviceNote) unfilledFields.push("serviceNote");
+
       if (!date) unfilledFields.push("date");
       if (!time) unfilledFields.push("time");
 
@@ -160,11 +173,21 @@ const EmailForm = () => {
         </div>
         <div className={styles.inputRow}>
           <div className={styles.inputText}>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="technicalNote">Technical Note</label>
             <input
               type="text"
-              id="message"
-              onChange={(e) => setMessage(e.target.value)}
+              id="technicalNote"
+              onChange={(e) => setTechnicalNote(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className={styles.inputRow}>
+          <div className={styles.inputText}>
+            <label htmlFor="serviceNote">Service Note</label>
+            <input
+              type="text"
+              id="serviceNote"
+              onChange={(e) => setServiceNote(e.target.value)}
             />
           </div>
         </div>
