@@ -7,46 +7,89 @@
 }
 
 .title {
-  font-size: var(--font-title);
+  font-size: var(--font-xxlarge);
   letter-spacing: 0.1em;
   font-family: "Fjalla One";
   margin-bottom: 35px;
   width: 100%;
   text-align: center;
 }
+
 .lineBreak {
   width: 300px;
   border: 1px solid black;
   margin-bottom: 35px;
 }
+
 .subTitle {
-  font-size: var(--font-sub-title);
+  font-size: var(--font-xlarge);
   font-family: "Fjalla One";
   margin-bottom: 35px;
   width: 100%;
   text-align: center;
 }
+
 .description {
   width: 800px;
   text-align: center;
-  font-size: var(--font-sub-title);
+  font-size: var(--font-medium);
   margin-bottom: 35px;
 }
 
 .infoSection {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 var(--padding);
   text-align: center;
-  font-size: var(--font-button);
+  font-size: var(--font-medium);
 }
+
 .date {
   display: inline-block;
   width: 150px;
   text-align: center;
   font-weight: bold;
 }
+
 .clear {
   clear: both;
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: var(--font-large);
+  }
+
+  .subTitle {
+    font-size: var(--font-medium);
+    margin-bottom: 10px;
+  }
+
+  .description {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .infoSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--font-regular);
+  }
+  .date {
+    width: 100px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .description {
+    font-size: var(--font-regular);
+  }
+
+  .lineBreak {
+    width: 80%;
+  }
 }

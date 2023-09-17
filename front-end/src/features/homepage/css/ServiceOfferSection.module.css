@@ -6,7 +6,7 @@
 
 .title,
 .subTitle {
-  font-size: var(--font-title);
+  font-size: var(--font-xxlarge);
   text-align: center;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .description {
-  font-size: calc(var(--font-regular) * 1.2);
+  font-size: calc(var(--font-medium));
   text-align: center;
 }
 
@@ -58,10 +58,10 @@
 
 .viewMoreBtn a {
   display: inline-block;
-  padding: 0 25px;
+  padding: 10px 25px;
   text-decoration: none;
   color: var(--text-color);
-  font-size: var(--font-button);
+  font-size: var(--font-medium);
   font-weight: bold;
   transition: all 0.5s ease-in-out;
   border: 1px solid black;
@@ -70,4 +70,32 @@
 
 .viewMoreBtn a:hover {
   transform: scale(1.1);
+}
+
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .serviceSection {
+    padding: 0 var(--padding-mobile);
+  }
+  .title {
+    font-size: var(--font-xlarge);
+  }
+  .subTitle {
+    font-size: var(--font-large);
+  }
+  .galleryDisplay {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .serviceGalleryDescription {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }

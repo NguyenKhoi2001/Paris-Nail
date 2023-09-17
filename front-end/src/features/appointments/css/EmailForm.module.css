@@ -6,7 +6,7 @@
 .title {
   width: 100%;
   text-align: center;
-  font-size: var(--font-title);
+  font-size: var(--font-xxlarge);
   font-family: "Fjalla One";
   margin-bottom: 50px;
 }
@@ -42,12 +42,12 @@
   border-bottom: 2px solid black;
   padding: 5px 30px;
   outline: none;
-  font-size: var(--font-sub-title);
+  font-size: var(--font-xlarge);
 }
 
 .inputText label {
   color: black;
-  font-size: var(--font-sub-title);
+  font-size: var(--font-xlarge);
   display: block;
   padding: 5px 30px;
   margin-bottom: 5px;
@@ -67,7 +67,7 @@
 .submitBtn button {
   display: inline-block;
   color: var(--text-color);
-  font-size: var(--font-button);
+  font-size: var(--font-medium);
   font-weight: bold;
 
   border-radius: 50px;
@@ -82,4 +82,68 @@
 .error {
   border-color: red;
   box-shadow: 0 0 5px red;
+}
+.mobileViewNameDateTime {
+  display: none;
+}
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .emailForm {
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  .title {
+    font-size: var(--font-large);
+    margin-bottom: 20px;
+  }
+  .inputRow {
+    flex-direction: column;
+    gap: 5px;
+    /* border: 1px solid red; */
+    margin-bottom: 0;
+  }
+  .inputText input {
+    padding: 5px 5px;
+    font-size: var(--font-medium);
+  }
+
+  .inputText label {
+    padding: 5px 5px;
+    font-size: var(--font-medium);
+  }
+
+  .desktopViewNameDateTime {
+    display: none;
+  }
+  .mobileViewNameDateTime {
+    display: block;
+  }
+
+  .inputDateTime {
+    flex: 1;
+
+    padding: 5px;
+  }
+  .inputDate,
+  .inputTime {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid black;
+  }
+
+  /* Button styling */
+
+  .submitBtn button {
+    margin-top: 20px;
+    font-size: var(--font-regular);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }

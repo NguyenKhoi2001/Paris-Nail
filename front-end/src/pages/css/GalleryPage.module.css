@@ -6,7 +6,7 @@
 .title {
   font-family: "Fjalla One";
   color: #daa520;
-  font-size: calc(var(--font-logo) * 1.5);
+  font-size: calc(var(--font-xxlarge));
   margin-bottom: 20px;
   text-align: center;
 }
@@ -28,4 +28,31 @@
 }
 .card img:hover {
   transform: scale(1.1);
+}
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px var(--padding);
+  }
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px var(--padding-mobile);
+  }
+  .galleryGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px var(--padding-mobile);
+  }
+  .title {
+    font-size: calc(var(--font-xlarge));
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }

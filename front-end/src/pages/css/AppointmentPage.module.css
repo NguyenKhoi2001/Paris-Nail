@@ -2,3 +2,17 @@
   background-color: white;
   padding: var(--padding);
 }
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .appointmentPage {
+    padding: var(--padding-mobile);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+}

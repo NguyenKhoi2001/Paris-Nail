@@ -32,3 +32,26 @@
     color: #aaa;
   }
 }
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px var(--padding-mobile);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .leftContent,
+  .rightContent {
+    padding: 0;
+    text-align: center;
+    flex: 1;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+}

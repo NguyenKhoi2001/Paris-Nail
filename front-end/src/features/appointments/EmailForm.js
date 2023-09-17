@@ -90,7 +90,7 @@ const EmailForm = () => {
       <div className={styles.title}>LET'S US KNOW WHAT YOU THINK</div>
 
       <form onSubmit={handleSubmit}>
-        <div className={styles.inputRow}>
+        <div className={`${styles.inputRow} ${styles.desktopViewNameDateTime}`}>
           <div className={styles.inputText}>
             <label htmlFor="name">Name</label>
             <input
@@ -111,6 +111,30 @@ const EmailForm = () => {
               type="time"
               defaultValue={currentTime}
               onChange={(e) => setTime(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className={`${styles.inputRow} ${styles.mobileViewNameDateTime}`}>
+          <div className={styles.inputText}>
+            <div className={styles.inputDateTime}>
+              <input
+                className={styles.inputDate}
+                type="date"
+                defaultValue={currentDate}
+                onChange={(e) => setDate(e.target.value)}
+              />
+              <input
+                className={styles.inputTime}
+                type="time"
+                defaultValue={currentTime}
+                onChange={(e) => setTime(e.target.value)}
+              />
+            </div>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
         </div>

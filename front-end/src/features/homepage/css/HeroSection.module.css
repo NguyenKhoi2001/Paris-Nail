@@ -20,7 +20,7 @@
 
 .title {
   font-family: "Fjalla One";
-  font-size: var(--font-sub-title);
+  font-size: var(--font-xlarge);
   font-weight: 600;
   letter-spacing: 0.3rem;
   margin-bottom: 60px;
@@ -31,7 +31,7 @@
   background-color: black;
   box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.4);
   padding: 20px;
-  font-size: var(--font-button);
+  font-size: var(--font-medium);
   color: white;
   transition: transform ease-in-out 0.5s;
   text-decoration: none;
@@ -40,4 +40,27 @@
 
 .linkBtn:hover {
   transform: scale(1.1);
+}
+
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+  .heroContent {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto; /* resetting the bottom value */
+    padding: 0 20px;
+    text-align: center;
+  }
+  .title {
+    font-size: var(--font-large);
+  }
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
 }

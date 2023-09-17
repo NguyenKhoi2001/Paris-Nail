@@ -12,14 +12,30 @@ const Slider2D = ({ images }) => {
   return (
     <div className={styles.sliderContainer}>
       <Swiper
-        spaceBetween={30}
-        slidesPerView={4}
+        spaceBetween={10}
+        slidesPerView={1}
         loop={true}
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
+        breakpoints={{
+          // When window width is <= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          // When window width is <= 768px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1000: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

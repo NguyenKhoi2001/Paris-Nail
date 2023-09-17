@@ -11,7 +11,7 @@ function CancelSection() {
         WE ASK THAT YOU GIVE US 24 HOURS NOTICE IF YOU NEED TO CANCEL YOUR
         APPOINTMENT.
       </p>
-      <div className={styles.subTitle}>Paris Nails</div>
+      <div className={styles.title}>Paris Nails</div>
       <div className={styles.infoSection}>
         <div className={styles.left}>
           <div className={styles.subTitle}>Meet US at</div>

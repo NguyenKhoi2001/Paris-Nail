@@ -7,7 +7,7 @@
 .title {
   margin: 100px 0 50px 0;
   font-family: "Fjalla One";
-  font-size: var(--font-title);
+  font-size: var(--font-xxlarge);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +18,13 @@
   margin-bottom: 30px;
   display: flex;
   gap: 70px;
+  align-items: center;
 }
 
 .image,
 .textContent {
-  width: var(--about-width);
-  height: var(--about-height);
+  width: 100%;
+  height: 80%;
 }
 
 .image img {
@@ -36,18 +37,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-family: "Source Sans 3";
   text-align: center;
 }
 
 .textContent .subTitle {
-  margin-bottom: 50px;
-  font-size: var(--font-sub-title);
+  margin-bottom: 30px;
+  font-size: var(--font-xlarge);
   font-weight: 200;
 }
 
 .textContent .text {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
 }
 
 .viewMoreBtn {
@@ -69,4 +71,36 @@
 
 .viewMoreBtn a:hover {
   transform: scale(1.1);
+}
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 var(--padding-mobile);
+  }
+  .title {
+    margin: 20px 0 20px 0;
+    font-size: var(--font-xlarge);
+  }
+  .rowLeft,
+  .rowRight {
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .textContent .subTitle {
+    margin-bottom: 5px;
+    font-size: var(--font-large);
+  }
+
+  .textContent .text {
+    font-size: var(--font-regular);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }

@@ -6,7 +6,7 @@
 .title {
   font-family: "Fjalla One";
   color: white;
-  font-size: calc(var(--font-logo) * 1.5);
+  font-size: calc(var(--font-xxlarge));
   margin-bottom: 20px;
   color: white;
   text-align: center;
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 30px calc(var(--padding) * 0.5);
+  padding: 30px calc(var(--padding) * 0.5); /* Half padding the 2 sides */
   background-color: white;
   border-radius: 10px;
 }
@@ -34,10 +34,10 @@
 
 .viewMoreBtn a {
   display: inline-block;
-  padding: 0 25px;
+  padding: 10px 25px;
   text-decoration: none;
   color: white;
-  font-size: var(--font-button);
+  font-size: var(--font-medium);
   font-weight: bold;
   transition: all 0.5s ease-in-out;
   border: 1px solid white;
@@ -46,4 +46,29 @@
 
 .viewMoreBtn a:hover {
   transform: scale(1.1);
+}
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px var(--padding-mobile);
+  }
+  .title {
+    font-size: var(--font-xlarge);
+  }
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding: 30px calc(var(--padding) * 0.5); /* Half padding the 2 sides */
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }

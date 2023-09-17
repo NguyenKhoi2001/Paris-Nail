@@ -128,8 +128,15 @@
 }
 
 :root {
+  /* Breakpoints */
+  --mobile-breakpoint: 480px;
+  --tablet-portrait-breakpoint: 768px;
+  --tablet-landscape-breakpoint: 1024px;
+
   /*website*/
-  --padding: calc(0.0625 * 100vw);
+  --padding: 50px;
+  --padding-mobile: 15px;
+  --padding-tablet: 30px;
 
   /* Colors */
   --logo-color: #000080;
@@ -139,17 +146,15 @@
   --text-color: #000;
   --text-color-2: #fff;
 
-  /* Font Sizes scale with 1366x768*/
-  --font-regular: calc(0.012 * 100vw); /*16px*/
-  --font-navigation: calc(0.0175 * 100vw); /*24px*/
-  --font-button: calc(0.016 * 100vw); /*20px*/
-  --font-sub-title: calc(0.0205 * 100vw); /*28px*/ /*1600 x 32*/
-  --font-title: calc(0.025 * 100vw); /*34px*/
-  --font-logo: calc(0.0278 * 100vw); /*38px*/
-
-  /*about*/
-  --about-width: calc(0.4115 * 100vw); /*562px*/
-  --about-height: calc(0.42 * 100vh); /*323px*/
+  /* Font size defined */
+  --font-tiny: 10px; /* 10px - Sometimes used for legal text or very minor details. */
+  --font-small: 12px; /* 12px - Used for secondary text elements, like captions. */
+  --font-regular: 16px; /* 16px - Standard text size for body content. */
+  --font-medium: 20px; /* 20px - Maybe used for smaller headings or highlighted content. */
+  --font-large: 24px; /* 24px - Common for primary headings. */
+  --font-xlarge: 32px; /* 32px - Used for prominent headers, possibly on hero banners. */
+  --font-xxlarge: 48px; /* 48px - Very large size for major banners or promotional areas. */
+  --font-giant: 64px; /* 64px - Exceptionally large size, used sparingly for major emphasis. */
 }
 .container {
   position: relative;

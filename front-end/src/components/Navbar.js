@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./css/Navbar.module.css";
 import logo from "../assets/images/website/Logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ isHomepage }) => {
   const navClasses = isHomepage
     ? styles.nav
     : `${styles.nav} ${styles.different}`;
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className={navClasses}>
@@ -22,24 +30,27 @@ const Navbar = ({ isHomepage }) => {
         </Link>
       </div>
 
-      <div className={styles.links}>
+      <div className={isMenuOpen ? styles.linksActive : styles.links}>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/appointments">Appointments</Link>
-          </li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/services">
+            <li>Services</li>
+          </Link>
+          <Link to="/gallery">
+            <li>Gallery</li>
+          </Link>
+          <Link to="/appointments">
+            <li>Appointments</li>
+          </Link>
         </ul>
       </div>
 
       <div className={styles.right}></div>
+      <div className={styles.menuIcon} onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
     </nav>
   );
 };

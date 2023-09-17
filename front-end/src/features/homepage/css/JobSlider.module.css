@@ -17,9 +17,9 @@
   margin-top: 20px;
   text-align: center;
 }
-
+/* 
 .title > div {
-  font-size: var(--font-logo, 32px);
+  font-size: var(--font-large, 32px);
   font-family: "Noto Serif Display";
   margin: 5px 0;
   color: #262728;
@@ -32,4 +32,18 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 20px;
+} */
+/* Tablet - Landscape */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+  .jobContainer {
+    margin: 20px 0;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
 }
