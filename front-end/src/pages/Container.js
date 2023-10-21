@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import GalleryPage from "./GalleryPage";
 import { useLocation } from "react-router-dom";
 import AppointmentPage from "./AppointmentPage";
-import ServicePage3 from "./ServicePage3";
+// import ServicePage3 from "./ServicePage3";
 import ServicePage2 from "./ServicePage2";
 
 const Container = () => {
