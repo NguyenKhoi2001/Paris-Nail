@@ -158,7 +158,7 @@ const EmailForm = () => {
         </div>
         <div className={styles.inputRow}>
           <div className={styles.inputText}>
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone">Phone (Our contact: 945-241-5962)</label>
             <input
               type="text"
               id="phone"
