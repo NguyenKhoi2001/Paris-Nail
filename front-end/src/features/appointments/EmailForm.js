@@ -6,10 +6,14 @@ const EmailForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [technicalNote, setTechnicalNote] = useState("");
+  const [technicianNote, setTechnicianNote] = useState("");
   const [serviceNote, setServiceNote] = useState("");
 
-  const currentDate = new Date().toISOString().split("T")[0];
+  const twoDaysFromNow = new Date();
+  twoDaysFromNow.setDate(twoDaysFromNow.getDate() + 2);
+  const minDate = twoDaysFromNow.toISOString().split("T")[0];
+
+  const currentDate = minDate;
   const currentTime = new Date().toTimeString().split(" ")[0].slice(0, 5);
 
   const [date, setDate] = useState(currentDate);
@@ -38,7 +42,7 @@ const EmailForm = () => {
       name &&
       phone &&
       email &&
-      technicalNote &&
+      technicianNote &&
       serviceNote &&
       date &&
       time
@@ -49,7 +53,7 @@ const EmailForm = () => {
         from_name: name,
         from_email: email,
         date_time: formattedDateTime,
-        technical_note: technicalNote,
+        technician_note: technicianNote,
         service_note: serviceNote,
 
         phone: phone,
@@ -76,7 +80,7 @@ const EmailForm = () => {
       if (!name) unfilledFields.push("name");
       if (!phone) unfilledFields.push("phone");
       if (!email) unfilledFields.push("email");
-      if (!technicalNote) unfilledFields.push("technicalNote");
+      if (!technicianNote) unfilledFields.push("technicianNote");
       if (!serviceNote) unfilledFields.push("serviceNote");
 
       if (!date) unfilledFields.push("date");
@@ -117,6 +121,7 @@ const EmailForm = () => {
               className={styles.inputDate}
               type="date"
               defaultValue={currentDate}
+              min={minDate}
               onChange={(e) => setDate(e.target.value)}
             />
             <input
@@ -173,11 +178,13 @@ const EmailForm = () => {
         </div>
         <div className={styles.inputRow}>
           <div className={styles.inputText}>
-            <label htmlFor="technicalNote">Technical Note</label>
+            <label htmlFor="technicianNote">
+              Technician Note (who you want)
+            </label>
             <input
               type="text"
-              id="technicalNote"
-              onChange={(e) => setTechnicalNote(e.target.value)}
+              id="technicianNote"
+              onChange={(e) => setTechnicianNote(e.target.value)}
             />
           </div>
         </div>

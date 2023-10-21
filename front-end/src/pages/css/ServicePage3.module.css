@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.serviceContainer {
+  display: flex;
+  background: linear-gradient(135deg, #f6f6f6, #e1ffff, #c0f6f6);
+  background-size: cover;
+  background-position: center;
+  padding: 20px var(--padding);
+  height: 100vh;
+  width: 100vw;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 450px;
+  height: 450px;
+  background-color: black;
+  padding: 50px;
+  box-shadow: -20px 20px 10px grey;
+  position: relative;
+}
+
+.roundImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.customTable {
+  border-collapse: collapse;
+  position: relative;
+}
+.customTable tr {
+  display: flex;
+}
+.customTable td {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5px;
+  font-family: "Libre Baskerville";
+  font-size: var(--font-regular);
+  font-style: italic;
+}
+.customTable td:not(:last-child)::after {
+  content: "";
+  border-bottom: 1px dotted #000;
+  flex: 1;
+  margin-left: 0.5em;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.customTable thead tr td {
+  padding-bottom: 20px;
+}
+
+.customTable td:nth-child(2) {
+  padding-left: 50px;
+  padding-right: 300px;
+}

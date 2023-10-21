@@ -120,6 +120,16 @@
   font-style: normal;
 }
 
+/*Libre Baskerville*/
+@font-face {
+  font-family: "Libre Baskerville";
+  src: local("LibreBaskerville Regular"),
+    url("../../assets/font/Libre_Baskerville/LibreBaskerville-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*global style*/
 * {
   margin: 0;
