@@ -23,7 +23,7 @@ const Navbar = ({ isHomepage }) => {
           <div className={styles.text}>
             P
             <span className={styles.logoContainer}>
-              <img src={logo} alt="logo" />
+              <img loading="lazy" src={logo} alt="logo" />
             </span>
             RIS NAILS
           </div>

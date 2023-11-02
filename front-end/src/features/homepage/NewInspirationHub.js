@@ -12,22 +12,22 @@ const NewInspirationHub = () => {
       <div className={styles.title}>NAIL INSPIRATION HUB</div>
       <div className={styles.galleryGrid}>
         <div className={styles.card}>
-          <img src={NailImage1} alt="Nail 1" />
+          <img loading="lazy" src={NailImage1} alt="Nail 1" />
         </div>
         <div className={styles.card}>
-          <img src={NailImage2} alt="Nail 2" />
+          <img loading="lazy" src={NailImage2} alt="Nail 2" />
         </div>
         <div className={styles.card}>
-          <img src={NailImage3} alt="Nail 3" />
+          <img loading="lazy" src={NailImage3} alt="Nail 3" />
         </div>
         <div className={styles.card}>
-          <img src={NailImage4} alt="Nail 4" />
+          <img loading="lazy" src={NailImage4} alt="Nail 4" />
         </div>
         <div className={styles.card}>
-          <img src={NailImage5} alt="Nail 5" />
+          <img loading="lazy" src={NailImage5} alt="Nail 5" />
         </div>
         <div className={styles.card}>
-          <img src={NailImage6} alt="Nail 6" />
+          <img loading="lazy" src={NailImage6} alt="Nail 6" />
         </div>
       </div>
       <div className={styles.viewMoreBtn}>

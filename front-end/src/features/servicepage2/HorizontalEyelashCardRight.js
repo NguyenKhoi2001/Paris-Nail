@@ -23,7 +23,7 @@ const HorizontalEyelashCardRight = ({
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <img src={image} alt={serviceName} />
+        <img loading="lazy" src={image} alt={serviceName} />
       </div>
     </div>
   );

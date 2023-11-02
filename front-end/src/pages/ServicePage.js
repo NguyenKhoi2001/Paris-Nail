@@ -56,7 +56,12 @@ const ServicePage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src={bannerImage} alt="Service Banner" className={styles.banner} />
+      <img
+        loading="lazy"
+        src={bannerImage}
+        alt="Service Banner"
+        className={styles.banner}
+      />
       <div className={styles.nailServiceContainer}>
         <div className={styles.serviceContent}>
           <img

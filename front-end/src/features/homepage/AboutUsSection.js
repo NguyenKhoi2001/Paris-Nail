@@ -14,7 +14,7 @@ const AboutUsSection = () => {
 
       <div className={styles.rowLeft}>
         <div className={styles.image}>
-          <img src={BrandAndColorImage} alt="brand and color" />
+          <img loading="lazy" src={BrandAndColorImage} alt="brand and color" />
         </div>
         <div className={styles.textContent}>
           <div className={styles.subTitle}>Many Brands and Colors</div>
@@ -43,7 +43,7 @@ const AboutUsSection = () => {
           </div>
         </div>
         <div className={styles.image}>
-          <img src={catchingTrendImage} alt="catching trend" />
+          <img loading="lazy" src={catchingTrendImage} alt="catching trend" />
         </div>
       </div>
 
@@ -51,7 +51,7 @@ const AboutUsSection = () => {
 
       <div className={styles.rowLeft}>
         <div className={styles.image}>
-          <img src={comfortImage} alt="comfort come first" />
+          <img loading="lazy" src={comfortImage} alt="comfort come first" />
         </div>
         <div className={styles.textContent}>
           <div className={styles.subTitle}>Comfort First, Always!</div>
@@ -77,7 +77,7 @@ const AboutUsSection = () => {
           </div>
         </div>
         <div className={styles.image}>
-          <img src={qualityImage} alt="quality" />
+          <img loading="lazy" src={qualityImage} alt="quality" />
         </div>
       </div>
 

@@ -16,31 +16,31 @@ const GalleryPage = () => {
       <div className={styles.title}>Our Best Gallery</div>
       <div className={styles.galleryGrid}>
         <div className={styles.card}>
-          <img src={GalleryImage1} alt="Nail 1" />
+          <img loading="lazy" src={GalleryImage1} alt="Nail 1" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage2} alt="Nail 2" />
+          <img loading="lazy" src={GalleryImage2} alt="Nail 2" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage3} alt="Nail 3" />
+          <img loading="lazy" src={GalleryImage3} alt="Nail 3" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage4} alt="Nail 4" />
+          <img loading="lazy" src={GalleryImage4} alt="Nail 4" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage5} alt="Nail 5" />
+          <img loading="lazy" src={GalleryImage5} alt="Nail 5" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage6} alt="Nail 6" />
+          <img loading="lazy" src={GalleryImage6} alt="Nail 6" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage7} alt="Nail 7" />
+          <img loading="lazy" src={GalleryImage7} alt="Nail 7" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage8} alt="Nail 8" />
+          <img loading="lazy" src={GalleryImage8} alt="Nail 8" />
         </div>
         <div className={styles.card}>
-          <img src={GalleryImage9} alt="Nail 9" />
+          <img loading="lazy" src={GalleryImage9} alt="Nail 9" />
         </div>
       </div>
     </div>

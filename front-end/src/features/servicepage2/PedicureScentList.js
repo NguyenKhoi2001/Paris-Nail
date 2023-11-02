@@ -16,7 +16,7 @@ const PedicureScentList = () => {
       <div className={styles.flexContainer}>
         {IconsData.map((icon, index) => (
           <div className={styles.flexItem} key={index}>
-            <img src={icon.image} alt={icon.name} />
+            <img loading="lazy" src={icon.image} alt={icon.name} />
             <div className={styles.itemName}>{icon.name}</div>
           </div>
         ))}

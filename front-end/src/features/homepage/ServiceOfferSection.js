@@ -9,7 +9,7 @@ const ServiceOfferSection = () => {
     <div className={styles.serviceSection}>
       <div className={styles.title}>Service Offer</div>
       <div className={styles.imageContainer}>
-        <img src={serviceImage} alt="Service Offer" />
+        <img loading="lazy" src={serviceImage} alt="Service Offer" />
       </div>
       <div className={styles.serviceGallery}>
         <div className={styles.subTitle}>Nail Service</div>
@@ -22,7 +22,7 @@ const ServiceOfferSection = () => {
         <div className={styles.galleryDisplay}>
           <div className={styles.galleryLeft}>
             <div className={styles.imageContainer}>
-              <img src={eyelashImage} alt="eyelash" />
+              <img loading="lazy" src={eyelashImage} alt="eyelash" />
             </div>
             <div className={styles.title}>Pedicure</div>
             <div className={styles.description}>
@@ -32,7 +32,7 @@ const ServiceOfferSection = () => {
           </div>
           <div className={styles.galleryRight}>
             <div className={styles.imageContainer}>
-              <img src={pedicureImage} alt="pedicure" />
+              <img loading="lazy" src={pedicureImage} alt="pedicure" />
             </div>
             <div className={styles.title}>Eyelash</div>
             <div className={styles.description}>

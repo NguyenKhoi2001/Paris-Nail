@@ -5,7 +5,7 @@ const HorizontalEyelashCard = ({ image, serviceName, prices, description }) => {
   return (
     <div className={styles.itemContainer}>
       <div className={styles.imageContainer}>
-        <img src={image} alt={serviceName} />
+        <img loading="lazy" src={image} alt={serviceName} />
       </div>
       <div className={styles.itemContent}>
         <div className={styles.titleSection}>

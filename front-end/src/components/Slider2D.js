@@ -39,7 +39,12 @@ const Slider2D = ({ images }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`Slide ${index}`} className={styles.image} />
+            <img
+              loading="lazy"
+              src={image}
+              alt={`Slide ${index}`}
+              className={styles.image}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -6,7 +6,7 @@ const ServiceCardItem = ({ serviceName, price, img }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img src={img} alt={serviceName} />
+        <img loading="lazy" src={img} alt={serviceName} />
       </div>
       <div className={styles.cardContent}>
         {price && (

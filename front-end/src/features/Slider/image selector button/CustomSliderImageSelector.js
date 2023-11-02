@@ -21,7 +21,7 @@ const CustomSliderImageSelector = ({ images, currentSlide, changeSlide }) => {
                 : styles.slide
             }
           >
-            <img src={image.src} alt={image.alt} />
+            <img loading="lazy" src={image.src} alt={image.alt} />
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className={styles.heroSection}>
-      <img src={heroImage} alt="hero section" />
+      <img loading="lazy" src={heroImage} alt="hero section" />
       <div className={styles.heroContent}>
         <div className={styles.title}>
           LET'S MAKE YOUR NAIL AS UNIQUE AS YOU
