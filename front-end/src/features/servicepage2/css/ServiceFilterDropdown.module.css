@@ -1,0 +1,38 @@
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  max-width: 400px;
+  font-size: var(--font-large);
+  background-color: white;
+  border: 1px solid #007bff;
+}
+
+.selectedOption,
+.option {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+.selectedOption {
+  font-weight: bold;
+}
+
+.options {
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.option:hover {
+  background-color: #007bff;
+  color: white;
+}

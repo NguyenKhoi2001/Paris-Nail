@@ -1,0 +1,57 @@
+.imageChangeButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  text-align: center;
+  gap: 5px;
+  /* border: 1px solid red; */
+}
+
+.imageChangeButtons {
+  flex: 1;
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Removed the fixed width; flexbox will handle the width now */
+}
+
+.imageChangeButtons:hover {
+  transform: scale(1.1);
+}
+
+.imageChangeButtons.active {
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Grid for smaller screens */
+@media screen and (max-width: 640px) {
+  .imageChangeButtonsContainer {
+    border-radius: 0 0 50px 50px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    overflow: hidden;
+  }
+
+  .imageChangeButtons {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 35px;
+  }
+}
+
+/* Fallback for very small screens */
+@media screen and (max-width: 400px) {
+  .imageChangeButtonsContainer {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* 2 items per row for very small screens */
+  }
+}

@@ -120,6 +120,7 @@
   font-style: normal;
 }
 
+<<<<<<< HEAD
 /*Libre Baskerville*/
 @font-face {
   font-family: "Libre Baskerville";
@@ -130,6 +131,16 @@
   font-style: normal;
 }
 
+=======
+/* Pacifico Font-Face */
+@font-face {
+  font-family: "Pacifico";
+  src: local("Pacifico Regular"),
+    url("../../assets/font/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+>>>>>>> laptop
 /*global style*/
 * {
   margin: 0;

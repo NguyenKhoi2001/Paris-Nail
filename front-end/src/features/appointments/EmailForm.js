@@ -55,7 +55,6 @@ const EmailForm = () => {
         date_time: formattedDateTime,
         technician_note: technicianNote,
         service_note: serviceNote,
-
         phone: phone,
       };
 

@@ -1,0 +1,123 @@
+.pedicureContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin-bottom: 30px;
+  font-size: var(--font-xxlarge);
+}
+.description {
+  margin: 20px;
+  max-width: 1200px;
+  text-align: center;
+  word-spacing: 5px;
+  font-size: var(--font-large);
+}
+.flexContainer {
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.flexItem {
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 35px;
+  opacity: 0.3;
+}
+
+.flexItem img {
+  width: 100px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.flexItem .itemName {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -0);
+  width: 90%;
+  text-align: center;
+  font-size: var(--font-large);
+  color: black;
+  /* font-weight: bold; */
+}
+@keyframes opacityChange {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+.flexItem {
+  /* ... other styles ... */
+  animation: opacityChange 2s linear infinite;
+}
+
+.flexItem:nth-child(-n + 5) {
+  /* 1st row */
+  animation-delay: 0s;
+}
+
+.flexItem:nth-child(n + 6):nth-child(-n + 10) {
+  /* 2nd row */
+  animation-delay: 1s;
+}
+
+.flexItem:nth-child(n + 11):nth-child(-n + 15) {
+  /* 3rd row */
+  animation-delay: 2s;
+}
+
+.flexItem:nth-child(n + 16):nth-child(-n + 20) {
+  /* 4th row */
+  animation-delay: 3s;
+}
+
+.flexItem:hover {
+  animation: none;
+  opacity: 1;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .pedicureContainer {
+    padding: 50px;
+  }
+  .flexItem {
+    width: 25%; /* 4 items per row */
+  }
+  .flexitem:nth-child(n) {
+    animation-delay: 0s;
+  }
+  .flexContainer {
+    width: 100%;
+  }
+  .title {
+    margin: 0;
+    text-align: center;
+    font-size: var(--font-large);
+  }
+  .description {
+    width: 100%;
+    font-size: var(--font-regular);
+  }
+  .flexItem img {
+    width: 50px;
+  }
+  .flexItem .itemName {
+    font-size: var(--font-regular);
+  }
+}
