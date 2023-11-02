@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 5px 5px;
+  padding: 10px;
+}
+
+.activePage {
+  background-color: #000080; /* Updated to theme color */
+  color: white;
+}
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+}

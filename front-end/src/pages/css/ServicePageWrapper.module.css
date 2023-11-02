@@ -1,13 +1,11 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
 }
 
 .wrapperTitle {
   /* width: 60%; */
   margin: 50px;
-  text-align: center;
 }
 
 .wrapperTitle h2 {
@@ -24,36 +22,38 @@
   margin-top: 50px;
 }
 
+.nailServiceContainer,
+.eyelashContainer {
+  position: relative;
+}
 img.imageBackgroundLeft {
   position: absolute;
   top: 20;
   left: 0;
   width: 200px;
-  height: 80%;
+  height: 100%;
 }
 img.imageBackgroundRight {
   position: absolute;
   top: 20;
   right: 0;
   width: 200px;
-  height: 80%;
+  height: 100%;
 }
 .serviceContent {
-  position: relative;
   background: radial-gradient(circle at center, #e1ffff, #deffff, #e1ffff);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.filterSection {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
+  min-height: 60vh;
 }
 
 @media (max-width: 768px) {
+  .wrapperTitle {
+    width: 80%;
+    margin: 50px;
+  }
   .wrapperTitle h2 {
     width: 200px;
     font-size: var(--font-medium);

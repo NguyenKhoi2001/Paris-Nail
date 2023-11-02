@@ -1,0 +1,25 @@
+.button {
+  font-size: var(--font-medium);
+  margin: 5px 15px;
+  padding: 10px 20px;
+  border: 1px solid var(--wesbos);
+  border-radius: 3px;
+  color: black;
+  border: 1px solid var(--logo-color);
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.active {
+  background-color: var(--logo-color);
+  color: white;
+}
+@media (max-width: 768px) {
+  .button {
+    font-size: var(--font-regular);
+    margin: 0;
+    padding: 5px 10px;
+  }
+}

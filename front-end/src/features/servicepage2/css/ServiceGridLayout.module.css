@@ -1,0 +1,22 @@
+/* GridLayoutComponent.module.css */
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Mobile view: 1 column */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PC view: 4 columns */
+@media (min-width: 769px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,15 @@
+.pedicureContainer {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.guidance {
+  margin-bottom: 20px;
+  color: grey;
+  font-size: var(--font-medium);
+}
+@media (max-width: 768px) {
+}

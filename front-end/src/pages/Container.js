@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import GalleryPage from "./GalleryPage";
 import { useLocation } from "react-router-dom";
 import AppointmentPage from "./AppointmentPage";
-import ServicePage2 from "./ServicePage2";
+import ServicePage from "./ServicePage";
 
 const Container = () => {
   const location = useLocation();
@@ -19,7 +19,7 @@ const Container = () => {
       <div>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/services" element={<ServicePage2 />} />
+          <Route path="/services" element={<ServicePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/appointments" element={<AppointmentPage />} />
         </Routes>

@@ -1,0 +1,28 @@
+.container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 1600px;
+}
+.mobileDisplay,
+.desktopDisplay {
+  display: flex;
+  justify-content: center;
+}
+
+.mobileDisplay {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .mobileDisplay {
+    display: flex;
+  }
+  .desktopDisplay {
+    display: none;
+  }
+}
