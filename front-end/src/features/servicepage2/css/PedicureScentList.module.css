@@ -1,16 +1,15 @@
 .pedicureContainer {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   font-size: var(--font-xxlarge);
 }
 .description {
   margin: 20px;
-  max-width: 1200px;
+
   text-align: center;
   word-spacing: 5px;
   font-size: var(--font-large);

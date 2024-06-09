@@ -24,7 +24,7 @@
   font-size: var(--font-xxlarge);
   font-weight: bold;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .priceSection {
   display: flex;
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .priceSection p {
   font-size: var(--font-xlarge);
@@ -83,7 +83,6 @@
   }
   .description p {
     font-size: var(--font-medium);
-    margin-bottom: 20px;
   }
   .imageContainer {
     width: 100%;

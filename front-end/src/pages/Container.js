@@ -7,7 +7,8 @@ import Footer from "../components/Footer";
 import GalleryPage from "./GalleryPage";
 import { useLocation } from "react-router-dom";
 import AppointmentPage from "./AppointmentPage";
-import ServicePage from "./ServicePage";
+// import ServicePage from "./ServicePage";
+import RedirectToExternalLink from "./RedirectToExternalLink";
 
 const Container = () => {
   const location = useLocation();
@@ -19,7 +20,7 @@ const Container = () => {
       <div>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/services" element={<ServicePage />} />
+          <Route path="/services" element={<RedirectToExternalLink />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/appointments" element={<AppointmentPage />} />
         </Routes>

@@ -202,7 +202,7 @@ export const menuData = [
   { title: "Acrylic", price: 40, img: Acrylic, type: "NailFullset" },
   {
     title: "Acrylic + Gel",
-    price: 58,
+    price: "Fill 40$ fullset 50$",
     img: AcrylicWithGel,
     type: "NailFullset",
   },

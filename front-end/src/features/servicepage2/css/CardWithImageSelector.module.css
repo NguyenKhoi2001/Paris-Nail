@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   border: 1px solid #45688f;
-  max-width: 1300px;
+  max-width: 100%;
 }
 
 .sliderContainer {

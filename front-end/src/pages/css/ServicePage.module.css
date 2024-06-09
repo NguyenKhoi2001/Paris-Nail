@@ -54,6 +54,9 @@ img.imageBackgroundRight {
 }
 
 @media (max-width: 768px) {
+  .wrapperTitle {
+    margin: 10px;
+  }
   .wrapperTitle h2 {
     width: 200px;
     font-size: var(--font-medium);
