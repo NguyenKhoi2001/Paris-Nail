@@ -7,7 +7,7 @@
   padding: 10px 0;
   border-radius: 5px;
   max-width: 400px;
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   background-color: white;
   border: 1px solid #007bff;
 }
@@ -35,4 +35,43 @@
 .option:hover {
   background-color: #007bff;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .dropdownContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    max-width: 200px;
+    font-size: var(--font-regular);
+    background-color: white;
+    border: 1px solid #007bff;
+  }
+
+  .selectedOption,
+  .option {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .selectedOption {
+    font-weight: bold;
+  }
+
+  .options {
+    position: absolute;
+    top: 35px;
+    background-color: white;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .option {
+    padding: 10px;
+  }
+  .option:hover {
+    background-color: #007bff;
+    color: white;
+  }
 }

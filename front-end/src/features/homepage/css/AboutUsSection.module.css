@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   padding: 0 var(--padding);
+  margin-bottom: 100px;
+  width: 100%;
+  max-width: 1200px; /* Limit the max-width to 1200px */
+  margin: 0 auto; /* Center the content horizontally */
 }
 
 .title {
@@ -13,67 +17,74 @@
   align-items: center;
 }
 
-.rowLeft,
-.rowRight {
+.row {
   margin-bottom: 30px;
   display: flex;
-  gap: 70px;
+  justify-content: space-between;
+  gap: 30px;
   align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
 }
 
 .image,
 .textContent {
-  width: 100%;
-  height: 80%;
+  width: 48%; /* Adjust to fit side by side on larger screens */
 }
 
 .image img {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+  object-fit: cover; /* Ensures images cover the container properly */
 }
 
 .textContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   font-family: "Source Sans 3";
-  text-align: center;
+  text-align: left; /* Align text to the left for better readability */
 }
 
 .textContent .subTitle {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: var(--font-xlarge);
   font-weight: 200;
+  text-align: center;
 }
 
 .textContent .text {
   font-size: var(--font-medium);
+  text-align: center;
 }
 
-.viewMoreBtn {
-  margin: 20px 0;
-  text-align: end;
-}
-
-.viewMoreBtn a {
-  display: inline-block;
-  padding: 0 25px;
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: var(--font-button);
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid black;
-  border-radius: 50px;
-}
-
-.viewMoreBtn a:hover {
-  transform: scale(1.1);
-}
 /* Tablet - Landscape */
 @media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 var(--padding-mobile);
+  }
+  .row {
+    flex-direction: column; /* Stack the content on smaller screens */
+    gap: 30px;
+  }
+
+  .image,
+  .textContent {
+    width: 100%; /* Make images and text content full width on tablets */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textContent .subTitle {
+    font-size: var(--font-large);
+  }
+
+  .textContent .text {
+    width: 75%;
+    font-size: var(--font-regular);
+  }
 }
 
 /* Tablet - Portrait */
@@ -85,22 +96,52 @@
     margin: 20px 0 20px 0;
     font-size: var(--font-xlarge);
   }
-  .rowLeft,
-  .rowRight {
-    margin-bottom: 30px;
+  .row {
     flex-direction: column;
     gap: 30px;
   }
+
   .textContent .subTitle {
-    margin-bottom: 5px;
-    font-size: var(--font-large);
+    font-size: var(--font-medium);
+    margin-bottom: 10px;
   }
 
   .textContent .text {
-    font-size: var(--font-regular);
+    font-size: var(--font-small);
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .container {
+    padding: 0 var(--padding-mobile);
+  }
+
+  /* Make the row stack vertically */
+  .row {
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    gap: 20px; /* Add space between text and image */
+  }
+
+  .image,
+  .textContent {
+    width: 100%; /* Ensure both the image and text content are full width */
+  }
+
+  .textContent .subTitle {
+    font-size: var(--font-medium); /* Adjust subtitle size */
+    text-align: center; /* Center the subtitle text */
+    margin-bottom: 10px;
+  }
+
+  .textContent .text {
+    font-size: var(--font-xsmall); /* Adjust text size */
+    text-align: center; /* Center the text */
+  }
+
+  .title {
+    font-size: var(--font-large); /* Adjust title size for mobile */
+    margin: 20px 0;
+  }
 }

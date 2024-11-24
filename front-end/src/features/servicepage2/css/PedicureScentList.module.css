@@ -5,17 +5,17 @@
 }
 .title {
   margin-bottom: 5px;
-  font-size: var(--font-xxlarge);
+  font-size: var(--font-xlarge);
 }
 .description {
-  margin: 20px;
-
+  width: 1200px;
+  margin: 20px 20vh;
   text-align: center;
   word-spacing: 5px;
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
 }
 .flexContainer {
-  max-width: 1300px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

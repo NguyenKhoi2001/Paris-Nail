@@ -1,4 +1,3 @@
-/* CardComponent.module.css */
 .card {
   display: flex;
   flex-direction: column;
@@ -8,6 +7,12 @@
   width: 300px;
   height: 400px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale-up on hover */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
 }
 
 .imageContainer {
@@ -17,19 +22,20 @@
 }
 
 .imageContainer img {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Ensure full width */
+  height: 250px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0; /* Rounded corners only on top */
 }
 
 .cardContent {
   flex: 1;
-  padding: 20px 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .title {
   flex: 1;
   margin-bottom: 10px;
@@ -41,16 +47,84 @@
   font-size: 14px;
   margin-bottom: 10px;
 }
+
 .priceValue {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   font-weight: bold;
   font-family: "Arial", sans-serif;
   margin-bottom: 10px;
 }
 
+@media (max-width: 1024px) {
+  .card {
+    width: 280px;
+    height: 380px;
+  }
+
+  .imageContainer img {
+    height: 230px;
+  }
+
+  .cardContent {
+    padding: 15px;
+  }
+
+  .description {
+    font-size: 13px; /* Slightly smaller text for tighter layouts */
+  }
+}
+
 @media (max-width: 768px) {
   .card {
-    width: 250px;
-    height: 350px;
+    width: 240px;
+    height: 320px;
+  }
+
+  .imageContainer img {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: var(--font-small);
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .priceValue {
+    font-size: var(--font-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for small screens */
+    max-width: 220px; /* Cap max width for better layout */
+    height: auto; /* Auto height for flexibility */
+  }
+
+  .imageContainer img {
+    height: 180px; /* Smaller image for mobile */
+  }
+
+  .cardContent {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: var(--font-small);
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .priceValue {
+    font-size: var(--font-small); /* Reduce size for mobile screens */
   }
 }

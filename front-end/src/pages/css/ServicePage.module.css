@@ -5,39 +5,49 @@
 }
 
 .wrapperTitle {
-  /* width: 60%; */
-  margin: 50px;
+  margin: 40px auto;
   text-align: center;
 }
 
 .wrapperTitle h2 {
-  width: 400px;
+  width: 300px;
   color: black;
   padding: 5px 20px;
-  font-size: var(--font-xxlarge);
-  border-bottom: 5px solid black;
+  font-size: var(--font-xlarge);
+  border-bottom: 3px solid black;
   padding-bottom: 5px;
   text-align: center;
 }
 
+.filterSection {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-medium);
+  gap: 20px; /* Added gap between elements */
+}
+
 .buttonsContainer {
-  margin-top: 50px;
+  border: 1px solid red;
+  margin-top: 30px; /* Reduced top margin */
 }
 
 img.imageBackgroundLeft {
   position: absolute;
-  top: 20;
+  top: 20px;
   left: 0;
-  width: 200px;
-  height: 80%;
+  width: 150px; /* Reduced width */
+  height: 60%;
 }
+
 img.imageBackgroundRight {
   position: absolute;
-  top: 20;
+  top: 20px;
   right: 0;
-  width: 200px;
-  height: 80%;
+  width: 150px; /* Reduced width */
+  height: 60%;
 }
+
 .serviceContent {
   position: relative;
   background: radial-gradient(circle at center, #e1ffff, #deffff, #e1ffff);
@@ -45,32 +55,84 @@ img.imageBackgroundRight {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0; /* Added padding for spacing */
 }
 
-.filterSection {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 1024px) {
+  .filterSection {
+    width: 80%; /* Adjusted width to fit better on screen */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Added gap between elements */
+  }
+
+  .wrapperTitle h2 {
+    width: 250px;
+    font-size: var(--font-large);
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  img.imageBackgroundLeft,
+  img.imageBackgroundRight {
+    width: 120px;
+    height: 50%;
+  }
+
+  .filterSection {
+    width: 90%;
+    justify-content: center; /* Center items horizontally */
+    gap: 15px;
+  }
 }
 
 @media (max-width: 768px) {
   .wrapperTitle {
     margin: 10px;
   }
+
   .wrapperTitle h2 {
     width: 200px;
     font-size: var(--font-medium);
   }
+
   .buttonsContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
-  img.imageBackgroundLeft {
-    display: none;
-  }
+  img.imageBackgroundLeft,
   img.imageBackgroundRight {
     display: none;
+  }
+
+  .serviceContent {
+    padding: 15px 0;
+  }
+
+  .filterSection {
+    width: 80%; /* Slightly reduced width */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+    gap: 10px; /* Smaller gap between elements */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapperTitle h2 {
+    font-size: var(--font-small);
+  }
+
+  .filterSection {
+    width: 100%; /* Use full width on small screens */
+    flex-direction: column;
+    align-items: center; /* Ensure elements are centered */
+    gap: 8px; /* Smaller gap */
+    font-size: var(--font-small); /* Reduce font size */
   }
 }

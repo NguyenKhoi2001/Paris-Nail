@@ -1,13 +1,24 @@
 .serviceSection {
-  padding: 0 var(--padding);
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Set max-width to 1200px */
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .title,
 .subTitle {
   font-size: var(--font-xxlarge);
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -19,36 +30,42 @@
   font-weight: 600;
 }
 
+.imageContainer {
+  width: 100%;
+  height: 200px; /* Fixed height for all images */
+  overflow: hidden; /* Ensure any overflow is hidden */
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imageContainer img {
   width: 100%;
-  border-radius: 25px;
+  height: 100%; /* Enforce fixed height */
+  object-fit: cover; /* Make sure images cover the area without stretching */
 }
 
 .serviceGallery {
   display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.serviceColumn {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
+  max-width: 350px; /* Ensure each column doesn't exceed 350px */
 }
 
 .description {
   font-size: calc(var(--font-medium));
   text-align: center;
-}
-
-/* The following class is added to target the Nail Service description */
-.serviceGalleryDescription {
-  width: 700px;
-}
-
-.galleryDisplay {
-  margin: 20px 0;
-  display: flex;
-  gap: 160px;
-}
-
-.galleryLeft,
-.galleryRight {
-  width: 100%;
+  margin-top: 10px;
 }
 
 .viewMoreBtn {
@@ -74,6 +91,14 @@
 
 /* Tablet - Landscape */
 @media screen and (max-width: 1024px) {
+  .serviceGallery {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .serviceColumn {
+    width: 80%;
+  }
 }
 
 /* Tablet - Portrait */
@@ -87,15 +112,27 @@
   .subTitle {
     font-size: var(--font-large);
   }
-  .galleryDisplay {
+  .serviceGallery {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
-  .serviceGalleryDescription {
+  .serviceColumn {
     width: 100%;
+    max-width: 100%;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .serviceSection {
+    padding: 0 var(--padding-mobile);
+  }
+  .serviceGallery {
+    gap: 20px;
+  }
+  .serviceColumn {
+    width: 100%;
+    max-width: 100%;
+  }
 }

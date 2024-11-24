@@ -22,22 +22,21 @@ const JobSlider = () => {
     JobImage4,
     JobImage5,
     JobImage6,
-
     JobImage7,
-
     JobImage8,
-
     JobImage9,
     JobImage10,
     JobImage11,
     JobImage12,
   ];
+
   return (
     <div className={styles.jobContainer}>
-      <Slider2D images={images} />
-      <div className={styles.title}>
-        {/* <div>Need A job contact us</div>
-        <div>We always Hiring</div> */}
+      <div className={styles.innerContainer}>
+        <Slider2D images={images} />
+        <div className={styles.title}>
+          {/* Optional: Add a job-specific message */}
+        </div>
       </div>
     </div>
   );

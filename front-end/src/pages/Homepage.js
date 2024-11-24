@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import AboutUsSection from "../features/homepage/AboutUsSection";
 import HeroSection from "../features/homepage/HeroSection";
 import JobSlider from "../features/homepage/JobSlider";
@@ -10,11 +9,10 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <HeroSection />
-      <AboutUsSection />
       <JobSlider />
       <ServiceOfferSection />
+      <AboutUsSection />
       <NewInspirationHub />
-      <Footer />
     </div>
   );
 };

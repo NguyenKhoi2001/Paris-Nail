@@ -3,6 +3,7 @@
   display: flex;
   border: 1px solid #45688f;
   max-width: 100%;
+  margin-bottom: 150px;
 }
 
 .sliderContainer {
@@ -22,7 +23,7 @@
   justify-content: center;
 }
 .serviceName {
-  font-size: var(--font-xxlarge);
+  font-size: var(--font-xlarge);
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -36,14 +37,14 @@
   margin-bottom: 30px;
 }
 .priceSection p {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
 }
 .description {
   display: flex;
   justify-content: center;
 }
 .description p {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-medium);
   text-align: center;
   width: 80%;
   color: rgb(109, 109, 109);

@@ -1,18 +1,19 @@
 .itemContainer {
-  width: 80%;
   display: flex;
   border: 1px solid #45688f;
   border-radius: 250px;
   overflow: hidden;
 }
 .sliderContainer {
-  width: 700px;
+  width: 1000px;
+  height: 300px;
   border-radius: 5px;
   overflow: hidden;
 }
 .itemContent {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .titleSection {
   display: flex;
@@ -21,7 +22,7 @@
   justify-content: center;
 }
 .serviceName {
-  font-size: var(--font-xxlarge);
+  font-size: var(--font-xlarge);
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -35,28 +36,27 @@
   margin-bottom: 10px;
 }
 .priceSection p {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
 }
 .description {
   display: flex;
   justify-content: center;
 }
 .description p {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   text-align: center;
   width: 80%;
   color: rgb(109, 109, 109);
 }
 
 .imageContainer {
-  width: 700px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .imageContainer img {
-  width: 100%;
+  width: 300px;
   height: auto;
   object-fit: cover;
 }
@@ -65,29 +65,67 @@
   .itemContainer {
     flex-direction: column;
     border-radius: 50px;
+    padding-bottom: 15px;
   }
+
   .sliderContainer {
     width: 100%;
-    height: 250px;
+    height: 200px; /* Adjusted height for smaller screens */
     border-radius: 5px;
     overflow: hidden;
   }
+
   .serviceName {
     font-size: var(--font-large);
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .priceSection {
+    flex-direction: column; /* Stack price elements vertically */
+    width: 100%; /* Utilize full width on smaller screens */
+  }
+
   .priceSection p {
     font-size: var(--font-medium);
   }
+
   .description p {
     font-size: var(--font-medium);
+    width: 90%; /* Reduce text width for better fit */
   }
+
   .imageContainer {
     width: 100%;
-    height: 250px;
-    border-radius: 5px;
-    overflow: hidden;
+    height: 250px; /* Adjust height dynamically based on content */
+  }
+
+  .imageContainer img {
+    max-width: 100%; /* Ensure image scales properly */
+    height: auto;
+    object-fit: cover; /* Prevent distortion */
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceName {
+    font-size: var(--font-medium); /* Smaller font size for compact design */
+    margin-top: 5px;
+  }
+
+  .priceSection p {
+    font-size: var(--font-regular);
+  }
+
+  .description p {
+    font-size: var(--font-regular);
+    width: 100%; /* Full width for small screens */
+  }
+
+  .imageContainer img {
+    max-width: 100%; /* Ensure image doesn't stretch */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
   }
 }

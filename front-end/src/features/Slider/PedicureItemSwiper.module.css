@@ -1,6 +1,6 @@
 /* PedicureItemSwiper.module.css */
 .swiperContainer {
-  width: 1000px;
+  width: 1200px;
 }
 @media (max-width: 768px) {
   .swiperContainer {

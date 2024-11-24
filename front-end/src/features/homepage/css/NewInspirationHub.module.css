@@ -1,54 +1,74 @@
 .container {
-  padding: 20px var(--padding);
-  background-color: black;
+  padding: 50px var(--padding);
+  background-color: aliceblue;
 }
 
 .title {
-  font-family: "Fjalla One";
-  color: white;
+  font-family: "Fjalla One", sans-serif;
+  color: #333;
   font-size: calc(var(--font-xxlarge));
-  margin-bottom: 20px;
-  color: white;
+  margin-bottom: 30px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .galleryGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 30px calc(var(--padding) * 0.5); /* Half padding the 2 sides */
+  gap: 20px;
+  padding: 20px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.card {
+  overflow: hidden; /* Ensure images don't overflow */
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for hover effect */
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the space without distortion */
   border-radius: 10px;
 }
 
 .viewMoreBtn {
-  margin: 20px 0;
-  text-align: end;
+  margin: 30px 0;
+  text-align: center; /* Center the button */
 }
 
 .viewMoreBtn a {
-  display: inline-block;
-  padding: 10px 25px;
-  text-decoration: none;
+  padding: 12px 30px;
+  background-color: #333;
   color: white;
+  text-decoration: none;
   font-size: var(--font-medium);
   font-weight: bold;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid white;
   border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
 .viewMoreBtn a:hover {
+  background-color: #555;
   transform: scale(1.1);
 }
+
 /* Tablet - Landscape */
 @media screen and (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Tablet - Portrait */
@@ -60,15 +80,20 @@
     font-size: var(--font-xlarge);
   }
   .galleryGrid {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 15px;
-    padding: 30px calc(var(--padding) * 0.5); /* Half padding the 2 sides */
-    background-color: white;
-    border-radius: 10px;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .container {
+    padding: 10px var(--padding-mobile);
+  }
+  .title {
+    font-size: var(--font-large);
+  }
+  .galleryGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

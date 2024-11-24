@@ -6,6 +6,7 @@ import NailImage3 from "../../assets/images/nail/Nail3.jpg";
 import NailImage4 from "../../assets/images/nail/Nail4.jpg";
 import NailImage5 from "../../assets/images/nail/Nail5.jpg";
 import NailImage6 from "../../assets/images/nail/Nail6.jpg";
+
 const NewInspirationHub = () => {
   return (
     <div className={styles.container}>

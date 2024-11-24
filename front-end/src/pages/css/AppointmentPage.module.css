@@ -1,18 +1,28 @@
 .appointmentPage {
-  background-color: white;
-  padding: var(--padding);
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 40px var(--padding); /* Spacious padding */
+  margin: 20px auto; /* Centered with vertical spacing */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 /* Tablet - Landscape */
 @media screen and (max-width: 1024px) {
+  .appointmentPage {
+    padding: 30px var(--padding-mobile); /* Adjust padding for tablets */
+  }
 }
 
 /* Tablet - Portrait */
 @media screen and (max-width: 768px) {
   .appointmentPage {
-    padding: var(--padding-mobile);
+    padding: 20px var(--padding-mobile); /* Compact padding for smaller tablets */
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .appointmentPage {
+    padding: 15px var(--padding-mobile); /* Tightest padding for mobile */
+  }
 }

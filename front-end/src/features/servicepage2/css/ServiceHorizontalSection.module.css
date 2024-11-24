@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  width: 1600px;
+  width: 1200px;
 }
 .mobileDisplay,
 .desktopDisplay {
@@ -17,7 +17,8 @@
 }
 @media (max-width: 768px) {
   .container {
-    width: 100%;
+    width: 300px;
+    margin: 0auto;
   }
   .mobileDisplay {
     display: flex;

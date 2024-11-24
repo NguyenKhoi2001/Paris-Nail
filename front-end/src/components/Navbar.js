@@ -8,7 +8,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = ({ isHomepage }) => {
   const navClasses = isHomepage
     ? styles.nav
-    : `${styles.nav} ${styles.different}`;
+    : `${styles.nav} ${styles.differentNav}`;
 
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -17,41 +17,47 @@ const Navbar = ({ isHomepage }) => {
   };
 
   return (
-    <nav className={navClasses}>
-      <div className={styles.logo}>
-        <Link to="/">
-          <div className={styles.text}>
-            P
-            <span className={styles.logoContainer}>
-              <img loading="lazy" src={logo} alt="logo" />
-            </span>
-            RIS NAILS
+    <div className={styles.navContainer}>
+      <nav className={navClasses}>
+        <div className={styles.navContent}>
+          <div className={styles.logo}>
+            <Link to="/">
+              <div className={styles.text}>
+                P
+                <span className={styles.logoContainer}>
+                  <img loading="lazy" src={logo} alt="logo" />
+                </span>
+                RIS NAILS
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
 
-      <div className={isMenuOpen ? styles.linksActive : styles.links}>
-        <ul>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/services">
-            <li>Services</li>
-          </Link>
-          <Link to="/gallery">
-            <li>Gallery</li>
-          </Link>
-          <Link to="/appointments">
-            <li>Appointments</li>
-          </Link>
-        </ul>
-      </div>
+          <div className={isMenuOpen ? styles.linksActive : styles.links}>
+            <ul>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <Link to="/price">
+                <li>Menu Prices</li>
+              </Link>
+              <Link to="/services">
+                <li>Services</li>
+              </Link>
+              <Link to="/gallery">
+                <li>Gallery</li>
+              </Link>
+              <Link to="/appointments">
+                <li>Appointments</li>
+              </Link>
+            </ul>
+          </div>
 
-      <div className={styles.right}></div>
-      <div className={styles.menuIcon} onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} />
-      </div>
-    </nav>
+          <div className={styles.menuIcon} onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
+        </div>
+      </nav>
+    </div>
   );
 };
 

@@ -1,58 +1,96 @@
 .container {
-  padding: 20px var(--padding);
-  background-color: white;
+  padding: 40px var(--padding); /* Added more padding for better spacing */
+  margin: 20px auto; /* Center and add vertical spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px;
 }
 
 .title {
   font-family: "Fjalla One";
   color: #daa520;
   font-size: calc(var(--font-xxlarge));
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Increased margin for better spacing from grid */
   text-align: center;
 }
 
 .galleryGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 30px var(--padding);
-  background-color: white;
+  gap: 30px; /* Consistent spacing between cards */
+  padding: 20px var(--padding); /* Added padding for the entire grid */
+  background-color: white; /* Slight contrast from container */
   border-radius: 10px;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  transition: all 0.5s ease;
+  border-radius: 15px; /* Softer corner radius for better visual appeal */
+  transition: all 0.4s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 .card img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Subtle zoom for hover effect */
 }
+
+.card {
+  overflow: hidden; /* Prevent content spill on hover zoom */
+}
+
 /* Tablet - Landscape */
 @media screen and (max-width: 1024px) {
   .galleryGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px var(--padding);
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    gap: 20px; /* Reduced spacing for tighter layouts */
+    padding: 15px var(--padding);
+  }
+
+  .title {
+    font-size: calc(var(--font-xlarge)); /* Slightly smaller title */
+    margin-bottom: 20px;
   }
 }
 
 /* Tablet - Portrait */
 @media screen and (max-width: 768px) {
   .container {
-    padding: 20px var(--padding-mobile);
+    padding: 20px var(--padding-mobile); /* Adjusted padding for smaller screens */
+    margin: 10px auto; /* Reduced margin */
   }
+
   .galleryGrid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    padding: 10px var(--padding-mobile);
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Two columns for portrait tablets */
+    gap: 15px; /* Tighter spacing for mobile */
   }
+
+  .card img {
+    border-radius: 10px; /* Smaller radius for mobile visuals */
+  }
+
   .title {
-    font-size: calc(var(--font-xlarge));
+    font-size: calc(var(--font-large)); /* More compact title */
+    margin-bottom: 15px;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .galleryGrid {
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 10px; /* Minimized gap for better fit */
+    padding: 10px var(--padding-mobile); /* Compact padding */
+  }
+
+  .card img {
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: calc(var(--font-medium)); /* Compact title for small screens */
+    margin-bottom: 10px;
+  }
 }
