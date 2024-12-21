@@ -9,9 +9,8 @@ const EmailForm = () => {
   const [technicianNote, setTechnicianNote] = useState("");
   const [serviceNote, setServiceNote] = useState("");
 
-  const twoDaysFromNow = new Date();
-  twoDaysFromNow.setDate(twoDaysFromNow.getDate() + 2);
-  const minDate = twoDaysFromNow.toISOString().split("T")[0];
+  const nowTime = new Date();
+  const minDate = nowTime.toISOString().split("T")[0];
 
   const currentDate = minDate;
   const currentTime = new Date().toTimeString().split(" ")[0].slice(0, 5);
